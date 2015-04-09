@@ -1,0 +1,18 @@
+﻿<link href="analysis.css" rel="stylesheet" />
+<section class="tab" ng-controller="TabController as panel">
+
+    <div id="sidebar-nav">
+        <ul id="dashboard-menu">
+            <li ng-class="{active:panel.isSelected(1) }">
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <a href ng-click="panel.selectTab(1)"> Recovery Interval</a>
+            </li>
+        </ul>
+    </div>
+    <div ng-show="panel.isSelected(1)">
+        <div ng-include="template_recoveryInterval.url"></div>
+    </div>
+</section>

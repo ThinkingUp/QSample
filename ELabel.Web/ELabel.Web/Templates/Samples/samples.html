@@ -1,0 +1,43 @@
+﻿
+<link href="samples.css" rel="stylesheet" />
+
+<link href="alerts.css" rel="stylesheet" />
+<section class="tab" ng-controller="TabController as panel">
+
+    <div id="sidebar-nav">
+        <ul id="dashboard-menu">
+            <li ng-class="{active:panel.isSelected(1) }">
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <a href ng-click="panel.selectTab(1)">Real time status</a>
+            </li>
+            <li>
+                <form class="fa-align-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Barcode">
+                    </div>
+                 
+                    <button type="submit" class="btn btn-default">Track</button>
+                </form>
+            </li>
+ 
+        </ul>
+
+
+    </div>
+
+    <div ng-show="panel.isSelected(1)">
+        <div ng-include="template_label.url"></div>
+    </div>
+    <div ng-show="panel.isSelected(2)">
+        <div ng-include="template_labelHistory.url"></div>
+    </div>
+    
+
+</section>
+
+
+
+

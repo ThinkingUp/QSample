@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html ng-app="eLabel">
+<head>
+    <title>qSample</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
+    <link rel="stylesheet" href="css/simple-sidebar.css">
+    <!-- libraries -->
+    <link href="Content/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css" />
+    <link href="Content/font-awesome.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/elements.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="css/index.css" type="text/css" media="screen" />
+
+    <script src="Scripts/jquery.knob.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="index.js"></script>
+
+
+    <script src="Templates/Home/home.js"></script>
+    <script src="Templates/Alerts/alerts.js"></script>
+    <script src="Templates/Samples/samples.js"></script>
+    <script src="Templates/Analysis/analysis.js"></script>
+    <script src="Templates/Message/message.js"></script>
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ-Uls9EWZIgcQG5Ze6v_YeLbQ8a4Q_eQ">
+
+    </script>
+</head>
+<body>
+    <div ng-controller="MainCtrl">
+        <!-- navbar -->
+        <div class="navbar">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a href="index.html"><img src="qsample.png" alt="qSample" style="width:128px;height:60px"></a>
+                        <!--<a class="navbar-brand" href="index.html"><img src="qsample.png" alt="qSample" style="width:128px;height:60px"></a>-->
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#samples">Sample tracking</a></li>
+                            <li><a href="#alerts">Alerts</a></li>
+                            <li><a href="#analysis">Analysis</a></li>
+                            <li><a href="#message">Message</a></li>
+
+                        </ul>
+                        
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Search</button>
+                        </form>
+                        
+                        <p class="navbar-text navbar-right"><i class="glyphicon glyphicon-user"></i> <a href="#" class="navbar-link">Jose Alvarado</a></p>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+        <!-- end navbar -->
+        <!-- sidebar -->
+        <div>{{results[0].Ag_MEICP41s_ppm}}</div>
+        <!-- end sidebar -->
+        <!-- main container -->
+    <div class="skins-nav">
+        <a href="#alerts" onclick="revert();" target="_self" class="skin first_nav selected">
+            <span class="icon"><i style="color: yellow;" class="fa fa-exclamation-triangle"></i></span><span class="text">New Alert!</span><span class="sub-text">Click here to view alert</span>
+        </a>
+        <a href="#message" onclick="revert();" target="_self" class="skin second_nav" data-file="css/skins/dark.css">
+            <span class="icon"><i style="color: white;" class="fa fa-envelope"></i></span><span class="text">Message</span><span class="sub-text">Click here to view message</span>
+        </a>
+    </div>
+        <ng-view></ng-view>
+    <script src="Scripts/pusher.min.js"></script>
+    <script type="text/javascript">
+        // Enable pusher logging - don't include this in production
+            Pusher.log = function (message) {
+            if (window.console && window.console.log) {
+                window.console.log(message);
+            }
+        };
+
+        var pusher = new Pusher('0a062137e6bd1304c414');
+        var channel = pusher.subscribe('test_channel');
+            channel.bind('my_event', function (data) {
+                if (data.message == 'rejectAlert') {
+            $('.skins-nav').css('right', '0');
+                } else if (data.message == 'labelUpdate') {
+
+                }
+
+                $.ajax({
+                    url: "../api/Labels/status"
+                }).done(function (msg) {
+                    //alert(JSON.stringify(msg));
+                    $("#Drill").text(msg[0].Scanned + "/" + msg[0].Unscanned);
+                    $("#Site").text(msg[1].Scanned + "/" + msg[1].Unscanned);
+                    $("#Train").text(msg[2].Scanned + "/" + msg[2].Unscanned);
+                    $("#Perth").text(msg[3].Scanned + "/" + msg[3].Unscanned);
+
+                    blinker(1);
+                    blinker(2);
+                    blinker(3);
+                    blinker(4);
+                    //alert(msg[0].Scanned);
+                });
+        });
+
+        function revert() {
+            $('.skins-nav').css('right', '');
+        }
+    </script>
+    <style>
+        .skins-nav {
+            opacity: 1;
+            -webkit-transition: right .3s;
+            -moz-transition: right .3s;
+            -ms-transition: right .3s;
+            -o-transition: right .3s;
+            transition: right .3s;
+            position: fixed;
+            right: -170px;
+            top: 135px;
+            font-size: 13px;
+            z-index: 9999;
+        }
+
+        .skins-nav a.first_nav {
+            background: rgba(228, 95, 95, 0.8);
+        }
+
+        .skins-nav a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding-left: 10px;
+            height: 67px;
+            -webkit-border-radius: 4px 0 0 4px;
+            -moz-border-radius: 4px 0 0 4px;
+            border-radius: 4px 0 0 4px;
+            margin-bottom: 3px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+        }
+
+        .skins-nav a.selected .icon {
+            background-position: 0 -9px;
+        }
+
+        .skins-nav a .icon {
+            float: left;
+            width: 15px;
+            height: 10px;
+            background: url('../img/skin-nav-bullets.png') 0 0 no-repeat;
+            margin: 15px 15px 0 5px;
+             font-size: 22px;
+        }
+
+        .skins-nav a .text {
+            padding-right: 12px;
+            white-space: nowrap;
+            display: block;
+            width: 174px;
+            font-size: 22px;
+            position: relative;
+            top: 14px;
+            -webkit-transition: width .2s;
+            -moz-transition: width .2s;
+            -ms-transition: width .2s;
+            -o-transition: width .2s;
+            transition: width .2s;
+        }
+        
+        .skins-nav a .sub-text {
+            padding-right: 12px;
+            white-space: nowrap;
+            display: block;
+            width: 174px;
+            font-size: 13px;
+            left: 5px;
+            position: relative;
+            top: 14px;
+            -webkit-transition: width .2s;
+            -moz-transition: width .2s;
+            -ms-transition: width .2s;
+            -o-transition: width .2s;
+            transition: width .2s;
+        }
+
+        .skins-nav:hover {
+            right: 0;
+        }
+
+        .skins-nav a.first_nav:hover {
+            background: rgba(228, 95, 95, 1);
+        }
+
+        .skins-nav a.second_nav {
+            background: rgba(95, 175, 228, 1);
+        }
+
+        .skins-nav a.second_nav:hover {
+            background: rgba(86, 157, 203, 1);
+        }
+    </style>
+    </div>
+    <div class="center-block">
+        <center>
+            <table>
+                <tr> <img src="qsample.png" alt="qSample" style="width:510px;height:240px"></tr>
+                <br>
+                <br>
+                <tr>
+                    <h4>
+                        <font color="706F6F">Keeping sample integrity and quality of data</font>
+                    </h4>
+                </tr>
+            </table>
+        </center>
+    </div>
+
+    <!--<form class="navbar-form" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Track sample</button>
+    </form>
+        -->
+</body>
+</html>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ComputerBeacon.Csv</name>
+    </assembly>
+    <members>
+        <member name="T:ComputerBeacon.Csv.Serialization">
+            <summary>
+            Serializes tabular data to and from csv format
+            </summary>
+        </member>
+        <member name="M:ComputerBeacon.Csv.Serialization.Serialize``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.Boolean)">
+            <summary>
+            Serializes data to csv format
+            </summary>
+            <typeparam name="T">Type of itmes to serialize</typeparam>
+            <param name="items">items to serialize</param>
+            <param name="skipReadonlyProperty">if true, read-only properties will not be serialized</param>
+            <param name="skipEnclosureCheck">set to true if it is certain that data does not contain comma or double quote characters for improved performance</param>
+            <returns></returns>
+        </member>
+        <member name="M:ComputerBeacon.Csv.Serialization.Deserialize``1(System.String)">
+            <summary>
+            Deserialize data from a csv string
+            </summary>
+            <typeparam name="T">Type of instances to deserialize to</typeparam>
+            <param name="csvString">data in csv format</param>
+            <returns></returns>
+        </member>
+        <member name="M:ComputerBeacon.Csv.Serialization.Deserialize``1(System.String,ComputerBeacon.Csv.Deserializer)">
+            <summary>
+            Deserialize data from a csv string
+            </summary>
+            <typeparam name="T">Type of instances to deserialize to</typeparam>
+            <param name="csvString">data in csv format</param>
+            <param name="deserializer">A deserialize which deserializes string values to the appropriate type</param>
+            <returns></returns>
+        </member>
+        <member name="T:ComputerBeacon.Csv.Scanner">
+            <summary>
+            A comma-separated values scanner implementing the RFC 4180 standard
+            </summary>
+        </member>
+        <member name="M:ComputerBeacon.Csv.Scanner.Next">
+            <summary>
+            Advances the scanner to the next token in the string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:ComputerBeacon.Csv.Scanner.Token.NextType">
+            <summary>
+            What follows after the string value
+            </summary>
+        </member>
+        <member name="T:ComputerBeacon.Csv.CsvTable">
+            <summary>
+            A table containing string values taken from a csv string
+            </summary>
+        </member>
+        <member name="M:ComputerBeacon.Csv.CsvTable.#ctor(System.String,System.Boolean)">
+            <summary>
+            Parses a csv string into a table
+            </summary>
+            <param name="csvString">Csv string</param>
+            <param name="headerLine">Whether the data includes a header line</param>
+        </member>
+        <member name="P:ComputerBeacon.Csv.CsvTable.Headers">
+            <summary>
+            Gets the headers of the table, if present
+            </summary>
+        </member>
+        <member name="P:ComputerBeacon.Csv.CsvTable.Rows">
+            <summary>
+            Gets the data rows of the table
+            </summary>
+        </member>
+        <member name="P:ComputerBeacon.Csv.CsvTable.Item(System.Int32,System.String)">
+            <summary>
+            Gets the data of a particualr column of a specific row
+            </summary>
+            <param name="row"></param>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ComputerBeacon.Csv.CsvTable.Item(System.Int32,System.Int32)">
+            <summary>
+            Gets the data at a specific cell
+            </summary>
+            <param name="row"></param>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ComputerBeacon.Csv.CsvTable.ColumnsCount">
+            <summary>
+            Gets the total number of columns
+            </summary>
+        </member>
+    </members>
+</doc>

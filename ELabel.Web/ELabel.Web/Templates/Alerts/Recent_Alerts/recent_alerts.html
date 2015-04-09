@@ -1,0 +1,316 @@
+﻿<link rel="stylesheet" href="../../../css/bootstrap-table-master/src/bootstrap-table.css" />
+<script type="text/javascript" src="../../../css/bootstrap-table-master/src/bootstrap-table.js"></script>
+<script>
+    function numFormatter(value) {
+        return value.toFixed(2);
+    }
+</script>
+<div class="content">
+    
+    <!-- settings changer -->
+
+
+    <div class="container-fluid">
+     
+        <div id="pad-wrapper">
+
+            <div id="pad-wrapper">
+                <h3>Recent Alerts</h3>
+                <div class="table-products section" style="margin-top: 5px;">
+                    <div class="row-fluid head">
+                        <div class="span12">
+                            <h4>Standard reference</h4>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>
+                                    <span class="line">Type</span>
+                                </th>
+                                <th>
+                                    <span class="line">Sample ID</span>
+                                </th>
+                                <th>
+                                    <span class="line">Despatch No</span>
+                                </th>
+
+                                <th class="span3">
+                                    <span class="line">Standard ID</span>
+                                </th>
+                                <th class="span3">
+                                    <span class="line">Actual Value</span>
+                                </th>
+                                <th class="span3">
+                                    <span class="line">Standard value</span>
+                                </th>
+                                <th class="span3">
+                                    <span class="line">Difference</span>
+                                </th>
+                                <th class="span3">
+                                    <span class="line">DateRaised</span>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="first" ng-repeat="result in alertResultS.AlertsStandardReference">
+                                <td>
+                                    <div class="img" style="border: none; background: none;">
+                                        <span style="color: #FAEB7A; font-size: 1.6em; margin-top: 5px;" class="glyphicon glyphicon-alert"></span>
+                                    </div>
+                                </td>
+                                <td>{{result.SampleID}}</td>
+                                <td>{{result.DispatchNo}}</td>
+                                <td>{{result.StandardID}}</td>
+                                <td>{{result.ActualValue}}</td>
+                                <td>{{result.StandardValue}}</td>
+                                <td>{{result.Difference| number:3}}</td>
+                                <td>{{result.DateRaised  | date:'medium'}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-md-2">Showing 5 rows of 99</div>
+                            <div class="col-md-4 col-md-push-7"> <span></span><a>Previous</a> <a>1</a> | <a>2</a> |<a>3</a> | <a>4</a> | <a>5</a> <a>Next</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pad-wrapper">
+                <div class="table-products section" style="margin-top: 50px;">
+                    <div class="row-fluid head">
+                        <div class="span12">
+                            <h4>Contamination check</h4>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>
+                                    <span class="line">Type</span>
+                                </th>
+                                <th>
+                                    <span class="line">Sample ID</span>
+                                </th>
+                                <th>
+                                    <span class="line">Despatch No</span>
+                                </th>
+                                <th class="span3">
+                                    <span class="line">Standard ID</span>
+                                </th>
+                                <th class="span3">
+                                    <span class="line">Actual Value</span>
+                                </th>
+                                <th class="span3">
+                                    <span class="line">Standard value</span>
+                                </th>
+                                <th class="span3">
+                                    <span class="line">Difference</span>
+                                </th>
+                                <th class="span3">
+                                    <span class="line">DateRaised</span>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="first" ng-repeat="result in alertResultS.AlertsContaminationCheck">
+                                <td>
+                                    <div class="img" style="border: none; background: none;">
+                                        <span style="color: #FAEB7A; font-size: 1.6em; margin-top: 5px;" class="glyphicon glyphicon-alert"></span>
+                                    </div>
+                                </td>
+                                <td>{{result.SampleID}}</td>
+                                <td>{{result.DispatchNo}}</td>
+                                <td>{{result.StandardID}}</td>
+                                <td>{{result.ActualValue}}</td>
+                                <td>{{result.StandardValue}}</td>
+                                <td>{{result.Difference | number:3}}</td>
+                                <td>{{result.DateRaised  | date:'medium'}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-md-2">Showing 5 rows of 45</div>
+                            <div class="col-md-4 col-md-push-7"> <span></span><a>Previous</a> <a>1</a> | <a>2</a> |<a>3</a> | <a>4</a> | <a>5</a> <a>Next</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        <!--<div id="pad-wrapper">
+            <div class="table-products section" style="margin-top: 50px;">
+                <div class="row-fluid head">
+                    <div class="span12">
+                        <h4>Basic alert</h4>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>
+                                <span class="line">Type</span>
+                            </th>
+                            <th>
+                                <span class="line">Alert definition</span>
+                            </th>
+                            <th>
+                                <span class="line">Label ID</span>
+                            </th>
+                            <th>
+                                <span class="line">Date</span>
+                            </th>
+                            <th>
+                                <span class="line">Field name</span>
+                            </th>
+                            <th>
+                                <span class="line">Description</span>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="first">
+                            <td>
+                                <div class="img" style="border: none; background: none;">
+                                    <span style="color: #FAEB7A; font-size: 1.6em; margin-top: 5px;" class="glyphicon glyphicon-alert"></span>
+                                </div>
+                            </td>
+                            <td>{{alertResultS[2].AlertDefinition}}</td>
+                            <td>{{alertResultS[2].LabelID}}</td>
+                            <td>{{alertResultS[2].Date}}</td>
+                            <td>{{alertResultS[2].FieldName}}</td>
+                            <td>{{alertResultS[2].Description}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>-->
+
+
+        <div id="pad-wrapper">
+            <div class="table-products section" style="margin-top: 5px;">
+                <div class="row-fluid head">
+                    <div class="span12">
+                        <h4>Duplicates</h4>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>
+                                <span class="line">Type</span>
+                            </th>
+                            <th>
+                                <span class="line">Sample ID</span>
+                            </th>
+                            <th>
+                                <span class="line">Despatch No</span>
+                            </th>
+                            <th>
+                                <span class="line">Components</span>
+                            </th>
+                            <th class="span3">
+                                <span class="line">Primary value</span>
+                            </th>
+                            <th class="span3">
+                                <span class="line">Duplicate value</span>
+                            </th>
+                            <th class="span3">
+                                <span class="line">Difference</span>
+                            </th>
+                            <th class="span3">
+                                <span class="line">Date Raised</span>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="first" ng-repeat="result in alertResultS.AlertsDuplicates">
+                            <td>
+                                <div class="img" style="border: none; background: none;">
+                                    <span style="color: #FAEB7A; font-size: 1.6em; margin-top: 5px;" class="glyphicon glyphicon-alert"></span>
+                                </div>
+                            </td>
+                            <td>{{result.SampleID}}</td>
+                            <td>{{result.DespatchNo}}</td>
+                            <td>{{result.Component}}</td>
+                            <td>{{result.ValuePrimary}}</td>
+                            <td>{{result.ValueDuplicate}}</td>
+                            <td>{{result.Difference}}</td>
+                            <td>{{result.DateRaised  | date:'medium'}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-md-2">Showing 1 row of 1</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div id="pad-wrapper">
+                <div class="table-products section" style="margin-top: 5px;">
+                    <div class="row-fluid head">
+                        <div class="span12">
+                            <h4>Exploration Performance</h4>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>
+                                    <span class="line">Type</span>
+                                </th>
+
+                                <th>
+                                    <span class="line"></span>Method Name
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Total Users
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Total Failures
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Percentage
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>Date Raised
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="first" ng-repeat="result in alertResultS.AlertsMethod">
+                                <td>
+                                    <div class="img" style="border: none; background: none;">
+                                        <span style="color: #FAEB7A; font-size: 1.6em; margin-top: 5px;" class="glyphicon glyphicon-alert"></span>
+                                    </div>
+                                </td>
+                                <td>{{result.MethodName}}</td>
+                                <td>{{result.TotalUses}}</td>
+                                <td>{{result.TotalFailures}}</td>
+                                <td>{{result.Percentage}}</td>
+                                <td>{{result.DateRaised  | date:'medium'}}</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-md-2">Showing 1 row of 1</div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

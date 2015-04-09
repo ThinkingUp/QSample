@@ -1,0 +1,37 @@
+﻿<link href="alerts.css" rel="stylesheet" />
+<div ng-controller="AlertsController">
+<section class="tab" ng-controller="TabController as panel">
+
+    <div id="sidebar-nav">
+        <ul id="dashboard-menu">
+            <li ng-class="{active:panel.isSelected(1) }">
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <a href ng-click="panel.selectTab(1)"> Recent alerts</a>
+            </li>
+           
+            <li ng-class="{active:panel.isSelected(3) }">
+                <a href ng-click="panel.selectTab(3)">Alert definition</a>
+            </li>
+            <li ng-class="{active:panel.isSelected(2) }">
+                <a href ng-click="panel.selectTab(2)">Add an alert</a>
+            </li>
+        </ul>
+
+        
+    </div>
+
+    <div ng-show="panel.isSelected(1)">
+        <div ng-include="template_recentAlerts.url"></div>
+    </div>
+ 
+    <div ng-show="panel.isSelected(3)">
+        <div ng-include="template_alertsDefinition.url"></div>
+    </div>
+    <div ng-show="panel.isSelected(2)">
+        <div ng-include="template_addAlerts.url"></div>
+    </div>
+</section>
+</div>

@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="elabelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AlertGenerator">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContaminationCheck">
+    <Key>
+      <PropertyRef Name="SAMPLEID" />
+    </Key>
+    <Property Name="SAMPLEID" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DUPLICATENO" Type="nvarchar" MaxLength="255" />
+    <Property Name="DESPATCHNO" Type="float" />
+    <Property Name="LABJOBNO" Type="nvarchar" MaxLength="255" />
+    <Property Name="STANDARDID" Type="nvarchar" MaxLength="255" />
+    <Property Name="PCHECKID" Type="nvarchar" MaxLength="255" />
+    <Property Name="PDUPLICATENO" Type="nvarchar" MaxLength="255" />
+    <Property Name="CHECKSTAGE" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ag_MEICP41s_ppm" Type="nvarchar" MaxLength="255" />
+    <Property Name="STD_Ag_MEICP41s_ppm" Type="float" />
+    <Property Name="MIN_Ag_MEICP41s_ppm" Type="float" />
+    <Property Name="MAX_Ag_MEICP41s_ppm" Type="float" />
+    <Property Name="Al_MEICP41s_pct" Type="float" />
+    <Property Name="STD_Al_MEICP41s_pct" Type="float" />
+    <Property Name="MIN_Al_MEICP41s_pct" Type="float" />
+    <Property Name="MAX_Al_MEICP41s_pct" Type="float" />
+    <Property Name="As_MEICP41s_ppm" Type="float" />
+    <Property Name="STD_As_MEICP41s_ppm" Type="float" />
+    <Property Name="MIN_As_MEICP41s_ppm" Type="float" />
+    <Property Name="MAX_As_MEICP41s_ppm" Type="float" />
+    <Property Name="Au_AA25_ppm" Type="float" />
+    <Property Name="STD_Au_AA25_ppm" Type="float" />
+    <Property Name="MIN_Au_AA25_ppm" Type="float" />
+    <Property Name="MAX_Au_AA25_ppm" Type="float" />
+  </EntityType>
+  <EntityType Name="Drillhole Samples">
+    <Key>
+      <PropertyRef Name="SAMPLEID" />
+    </Key>
+    <Property Name="SAMPLEID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HOLEID" Type="varchar" MaxLength="50" />
+    <Property Name="PROJECTCODE" Type="varchar" MaxLength="50" />
+    <Property Name="SAMPFROM" Type="varchar" MaxLength="50" />
+    <Property Name="SAMPTO" Type="varchar" MaxLength="50" />
+    <Property Name="SAMPLETYPE" Type="varchar" MaxLength="50" />
+    <Property Name="PRIORITY" Type="varchar" MaxLength="50" />
+    <Property Name="CoreCutDate" Type="varchar" MaxLength="50" />
+    <Property Name="Sample_Comments" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Drillholes">
+    <Key>
+      <PropertyRef Name="HOLEID" />
+    </Key>
+    <Property Name="HOLEID" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="PROJECTCODE" Type="varchar" MaxLength="50" />
+    <Property Name="LL_WGS84_Calc X" Type="varchar" MaxLength="50" />
+    <Property Name="LL_WGS84_Calc Y" Type="varchar" MaxLength="50" />
+    <Property Name="LL_WGS84_Calc Z" Type="varchar" MaxLength="50" />
+    <Property Name="TENEMENTID" Type="varchar" MaxLength="50" />
+    <Property Name="DEPTH" Type="varchar" MaxLength="50" />
+    <Property Name="PROSPECT" Type="varchar" MaxLength="50" />
+    <Property Name="STARTDATE" Type="varchar" MaxLength="50" />
+    <Property Name="ENDDATE" Type="varchar" MaxLength="50" />
+    <Property Name="CostCentre" Type="varchar" MaxLength="50" />
+    <Property Name="Depth_RC" Type="varchar" MaxLength="50" />
+    <Property Name="DrillholeType" Type="varchar" MaxLength="50" />
+    <Property Name="DrillTargetDepth" Type="varchar" MaxLength="50" />
+    <Property Name="EndDate_DDH" Type="varchar" MaxLength="50" />
+    <Property Name="EndDate_RC" Type="varchar" MaxLength="50" />
+    <Property Name="GearDownHole" Type="varchar" MaxLength="50" />
+    <Property Name="Geologist" Type="varchar" MaxLength="50" />
+    <Property Name="HoleStatus" Type="varchar" MaxLength="50" />
+    <Property Name="PlannedDepth" Type="varchar" MaxLength="50" />
+    <Property Name="PlannedHoleID" Type="varchar" MaxLength="50" />
+    <Property Name="PlannedRCDepth" Type="varchar" MaxLength="50" />
+    <Property Name="RigType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DrillholesPlanning">
+    <Key>
+      <PropertyRef Name="SAMPLEID" />
+    </Key>
+    <Property Name="HOLEID" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAMPLEID" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="PROJECTCODE" Type="nvarchar" MaxLength="255" />
+    <Property Name="SAMPFROM" Type="float" />
+    <Property Name="SAMPTO" Type="float" />
+    <Property Name="LL_WGS84_Calc#X" Type="float" />
+    <Property Name="LL_WGS84_Calc#Y" Type="float" />
+    <Property Name="ALTX1" Type="float" />
+    <Property Name="ALTY1" Type="float" />
+    <Property Name="ALTX2" Type="float" />
+    <Property Name="ALTY2" Type="float" />
+  </EntityType>
+  <EntityType Name="Label">
+    <Key>
+      <PropertyRef Name="SampleID" />
+    </Key>
+    <Property Name="SampleID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastScanned" Type="nvarchar" MaxLength="50" />
+    <Property Name="Scanned" Type="bit" />
+    <Property Name="IsTransferring" Type="bit" />
+  </EntityType>
+  <EntityType Name="Laboratory Analyses">
+    <Key>
+      <PropertyRef Name="SAMPLEID" />
+      <PropertyRef Name="DUPLICATENO" />
+      <PropertyRef Name="LABJOBNO" />
+    </Key>
+    <Property Name="SAMPLEID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DUPLICATENO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DESPATCHNO" Type="varchar" MaxLength="50" />
+    <Property Name="LABJOBNO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="STANDARDID" Type="varchar" MaxLength="50" />
+    <Property Name="PCHECKID" Type="varchar" MaxLength="50" />
+    <Property Name="PDUPLICATENO" Type="varchar" MaxLength="50" />
+    <Property Name="CHECKSTAGE" Type="varchar" MaxLength="50" />
+    <Property Name="Ag_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ag_MEICP61s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ag_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Al_MEICP41s_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Al2O3_MEICP85_pct" Type="varchar" MaxLength="50" />
+    <Property Name="As_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Au_AA25_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Au_PGMICP23_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Au_TL43_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="B_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ba_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ba_MEICP43_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ba_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="BaO_MEICP85_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Be_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Bi_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ca_MEICP41s_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Ca_MEICP43_pct" Type="varchar" MaxLength="50" />
+    <Property Name="CaO_MEICP85_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Cd_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ce_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ce_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Co_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Co_MEICP61s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Co_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Cr_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Cr_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Cs_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Cu_CUOG46_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Cu_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Cu_MEICP43_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Cu_MEICP61s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Cu_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Cu_MEOG46_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Cu_MEOG62_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Dy_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Er_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Eu_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Fe_MEICP41s_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Fe_MEICP43_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Ga_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ga_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Gd_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Hf_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Hg_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ho_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="K_MEICP41s_pct" Type="varchar" MaxLength="50" />
+    <Property Name="K2O_MEICP85_pct" Type="varchar" MaxLength="50" />
+    <Property Name="La_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="La_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="LOI_MEGRA05_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Lu_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Mg_MEICP41s_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Mg_MEICP43_pct" Type="varchar" MaxLength="50" />
+    <Property Name="MgO_MEICP85_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Mn_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Mn_MEICP43_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="MnO_MEICP85_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Mo_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Mo_MEICP61s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Mo_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Mo_MEOG62_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Mo_MOOG62_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Na_MEICP41s_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Na2O_MEICP85_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Nb_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Nd_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ni_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ni_MEICP43_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ni_MEICP61s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ni_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="P_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="P2O5_MEICP85_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Pass4mm_CRUQC_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Pass75um_PULQC_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Pb_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Pb_MEICP43_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Pb_MEICP61s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Pb_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Pd_PGMICP23_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Pr_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Pt_PGMICP23_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Rb_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Re_REOG62_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="S_MEICP41s_pct" Type="varchar" MaxLength="50" />
+    <Property Name="S_MEICP43_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Sb_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Sc_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="SiO2_MEICP85_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Sm_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Sn_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Sn_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Sr_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Sr_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="SrO_MEICP85_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Ta_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Tb_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Th_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Th_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Ti_MEICP41s_pct" Type="varchar" MaxLength="50" />
+    <Property Name="TiO2_MEICP85_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Tl_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Tl_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Tm_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="U_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="U_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="V_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="V_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="W_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="W_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Y_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Yb_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Zn_MEICP41s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Zn_MEICP43_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Zn_MEICP61s_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Zn_MEMS81_ppm" Type="varchar" MaxLength="50" />
+    <Property Name="Zn_MEOG62_pct" Type="varchar" MaxLength="50" />
+    <Property Name="Zr_MEMS81_ppm" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RecoveryIntervals">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="HOLEID" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="PROJECTCODE" Type="nvarchar" MaxLength="255" />
+    <Property Name="GEOLFROM" Type="float" />
+    <Property Name="GEOLTO" Type="float" />
+    <Property Name="PRIORITY" Type="float" />
+    <Property Name="Recovery_m" Type="float" />
+    <Property Name="RecovGeo" Type="nvarchar" MaxLength="255" />
+    <Property Name="RecovGeoDate" Type="datetime" />
+    <Property Name="CoreLength" Type="float" />
+    <Property Name="RecoveryRatio" Type="float" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RejectAlert">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Category" Type="nvarchar" MaxLength="255" />
+    <Property Name="SampleID" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="standardReference">
+    <Key>
+      <PropertyRef Name="SAMPLEID" />
+    </Key>
+    <Property Name="SAMPLEID" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DUPLICATENO" Type="nvarchar" MaxLength="255" />
+    <Property Name="DESPATCHNO" Type="float" />
+    <Property Name="LABJOBNO" Type="nvarchar" MaxLength="255" />
+    <Property Name="STANDARDID" Type="nvarchar" MaxLength="255" />
+    <Property Name="PCHECKID" Type="nvarchar" MaxLength="255" />
+    <Property Name="PDUPLICATENO" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ag_MEICP41s_ppm" Type="float" />
+    <Property Name="STD_Ag_MEICP41s_ppm" Type="float" />
+    <Property Name="STD_DEV_Ag_MEICP41s_ppm" Type="float" />
+    <Property Name="MIN_Ag_MEICP41s_ppm" Type="float" />
+    <Property Name="MAX_Ag_MEICP41s_ppm" Type="float" />
+    <Property Name="Al_MEICP41s_pct" Type="float" />
+    <Property Name="STD_Al_MEICP41s_pct" Type="float" />
+    <Property Name="STD_DEV_Al_MEICP41s_pct" Type="float" />
+    <Property Name="MIN_Al_MEICP41s_pct" Type="float" />
+    <Property Name="MAX_Al_MEICP41s_pct" Type="float" />
+    <Property Name="As_MEICP41s_ppm" Type="float" />
+    <Property Name="STD_As_MEICP41s_ppm" Type="float" />
+    <Property Name="STD_DEV_As_MEICP41s_ppm" Type="float" />
+    <Property Name="MIN_As_MEICP41s_ppm" Type="float" />
+    <Property Name="MAX_As_MEICP41s_ppm" Type="float" />
+    <Property Name="Au_AA25_ppm" Type="float" />
+    <Property Name="STD_Au_AA25_ppm" Type="float" />
+    <Property Name="STD_DEV_Au_AA25_ppm" Type="float" />
+    <Property Name="MIN_Au_AA25_ppm" Type="float" />
+    <Property Name="MAX_Au_AA25_ppm" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'elabel.dbo.DrillholeSamplesView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DrillholeSamplesView">
+    <Key>
+      <PropertyRef Name="HOLEID" />
+      <PropertyRef Name="SAMPLEID" />
+    </Key>
+    <Property Name="HOLEID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PROJECTCODE" Type="varchar" MaxLength="50" />
+    <Property Name="LL_WGS84_Calc X" Type="varchar" MaxLength="50" />
+    <Property Name="LL_WGS84_Calc Y" Type="varchar" MaxLength="50" />
+    <Property Name="LL_WGS84_Calc Z" Type="varchar" MaxLength="50" />
+    <Property Name="TENEMENTID" Type="varchar" MaxLength="50" />
+    <Property Name="DEPTH" Type="varchar" MaxLength="50" />
+    <Property Name="PROSPECT" Type="varchar" MaxLength="50" />
+    <Property Name="STARTDATE" Type="varchar" MaxLength="50" />
+    <Property Name="ENDDATE" Type="varchar" MaxLength="50" />
+    <Property Name="CostCentre" Type="varchar" MaxLength="50" />
+    <Property Name="Depth_RC" Type="varchar" MaxLength="50" />
+    <Property Name="DrillholeType" Type="varchar" MaxLength="50" />
+    <Property Name="DrillTargetDepth" Type="varchar" MaxLength="50" />
+    <Property Name="EndDate_DDH" Type="varchar" MaxLength="50" />
+    <Property Name="EndDate_RC" Type="varchar" MaxLength="50" />
+    <Property Name="GearDownHole" Type="varchar" MaxLength="50" />
+    <Property Name="Geologist" Type="varchar" MaxLength="50" />
+    <Property Name="HoleStatus" Type="varchar" MaxLength="50" />
+    <Property Name="PlannedDepth" Type="varchar" MaxLength="50" />
+    <Property Name="PlannedHoleID" Type="varchar" MaxLength="50" />
+    <Property Name="PlannedRCDepth" Type="varchar" MaxLength="50" />
+    <Property Name="RigType" Type="varchar" MaxLength="50" />
+    <Property Name="SAMPLEID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SAMPFROM" Type="varchar" MaxLength="50" />
+    <Property Name="SAMPTO" Type="varchar" MaxLength="50" />
+    <Property Name="SAMPLETYPE" Type="varchar" MaxLength="50" />
+    <Property Name="PRIORITY" Type="varchar" MaxLength="50" />
+    <Property Name="CoreCutDate" Type="varchar" MaxLength="50" />
+    <Property Name="Sample_Comments" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_RecoveryIntervals_Drillholes">
+    <End Role="Drillholes" Type="Self.Drillholes" Multiplicity="1" />
+    <End Role="RecoveryIntervals" Type="Self.RecoveryIntervals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drillholes">
+        <PropertyRef Name="HOLEID" />
+      </Principal>
+      <Dependent Role="RecoveryIntervals">
+        <PropertyRef Name="HOLEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="elabelModelStoreContainer">
+    <EntitySet Name="AlertGenerator" EntityType="Self.AlertGenerator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContaminationCheck" EntityType="Self.ContaminationCheck" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Drillhole Samples" EntityType="Self.Drillhole Samples" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Drillholes" EntityType="Self.Drillholes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DrillholesPlanning" EntityType="Self.DrillholesPlanning" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Label" EntityType="Self.Label" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Laboratory Analyses" EntityType="Self.Laboratory Analyses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RecoveryIntervals" EntityType="Self.RecoveryIntervals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RejectAlert" EntityType="Self.RejectAlert" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="standardReference" EntityType="Self.standardReference" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DrillholeSamplesView" EntityType="Self.DrillholeSamplesView" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DrillholeSamplesView].[HOLEID] AS [HOLEID], 
+    [DrillholeSamplesView].[PROJECTCODE] AS [PROJECTCODE], 
+    [DrillholeSamplesView].[LL_WGS84_Calc X] AS [LL_WGS84_Calc X], 
+    [DrillholeSamplesView].[LL_WGS84_Calc Y] AS [LL_WGS84_Calc Y], 
+    [DrillholeSamplesView].[LL_WGS84_Calc Z] AS [LL_WGS84_Calc Z], 
+    [DrillholeSamplesView].[TENEMENTID] AS [TENEMENTID], 
+    [DrillholeSamplesView].[DEPTH] AS [DEPTH], 
+    [DrillholeSamplesView].[PROSPECT] AS [PROSPECT], 
+    [DrillholeSamplesView].[STARTDATE] AS [STARTDATE], 
+    [DrillholeSamplesView].[ENDDATE] AS [ENDDATE], 
+    [DrillholeSamplesView].[CostCentre] AS [CostCentre], 
+    [DrillholeSamplesView].[Depth_RC] AS [Depth_RC], 
+    [DrillholeSamplesView].[DrillholeType] AS [DrillholeType], 
+    [DrillholeSamplesView].[DrillTargetDepth] AS [DrillTargetDepth], 
+    [DrillholeSamplesView].[EndDate_DDH] AS [EndDate_DDH], 
+    [DrillholeSamplesView].[EndDate_RC] AS [EndDate_RC], 
+    [DrillholeSamplesView].[GearDownHole] AS [GearDownHole], 
+    [DrillholeSamplesView].[Geologist] AS [Geologist], 
+    [DrillholeSamplesView].[HoleStatus] AS [HoleStatus], 
+    [DrillholeSamplesView].[PlannedDepth] AS [PlannedDepth], 
+    [DrillholeSamplesView].[PlannedHoleID] AS [PlannedHoleID], 
+    [DrillholeSamplesView].[PlannedRCDepth] AS [PlannedRCDepth], 
+    [DrillholeSamplesView].[RigType] AS [RigType], 
+    [DrillholeSamplesView].[SAMPLEID] AS [SAMPLEID], 
+    [DrillholeSamplesView].[SAMPFROM] AS [SAMPFROM], 
+    [DrillholeSamplesView].[SAMPTO] AS [SAMPTO], 
+    [DrillholeSamplesView].[SAMPLETYPE] AS [SAMPLETYPE], 
+    [DrillholeSamplesView].[PRIORITY] AS [PRIORITY], 
+    [DrillholeSamplesView].[CoreCutDate] AS [CoreCutDate], 
+    [DrillholeSamplesView].[Sample_Comments] AS [Sample_Comments]
+    FROM [dbo].[DrillholeSamplesView] AS [DrillholeSamplesView]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_RecoveryIntervals_Drillholes" Association="Self.FK_RecoveryIntervals_Drillholes">
+      <End Role="Drillholes" EntitySet="Drillholes" />
+      <End Role="RecoveryIntervals" EntitySet="RecoveryIntervals" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

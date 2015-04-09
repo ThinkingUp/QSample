@@ -1,0 +1,8 @@
+C:\Users\Jose\Desktop\ELabel\ELabel.Web\PusherServer\bin\Debug\PusherServer.XML
+C:\Users\Jose\Desktop\ELabel\ELabel.Web\PusherServer\bin\Debug\PusherServer.dll
+C:\Users\Jose\Desktop\ELabel\ELabel.Web\PusherServer\bin\Debug\PusherServer.pdb
+C:\Users\Jose\Desktop\ELabel\ELabel.Web\PusherServer\bin\Debug\RestSharp.dll
+C:\Users\Jose\Desktop\ELabel\ELabel.Web\PusherServer\bin\Debug\RestSharp.xml
+C:\Users\Jose\Desktop\ELabel\ELabel.Web\PusherServer\obj\Debug\PusherServer.csprojResolveAssemblyReference.cache
+C:\Users\Jose\Desktop\ELabel\ELabel.Web\PusherServer\obj\Debug\PusherServer.dll
+C:\Users\Jose\Desktop\ELabel\ELabel.Web\PusherServer\obj\Debug\PusherServer.pdb

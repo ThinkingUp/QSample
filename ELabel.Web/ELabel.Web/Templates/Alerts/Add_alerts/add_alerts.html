@@ -1,0 +1,72 @@
+﻿<link href="../../../css/bootstrap-toggle-master/css/bootstrap-toggle.css" rel="stylesheet">
+<script src="../../../css/bootstrap-toggle-master/js/bootstrap-toggle.js"></script>
+
+<div class="content">
+
+    <!-- settings changer -->
+
+    <div class="container-fluid col-md-6">
+        <div id="pad-wrapper" class="new-user">
+            <div class="row-fluid">
+                <h3>Add alert definition</h3>
+            </div>
+            
+            <div class="row-fluid form-wrapper" style="margin-left:15px;margin-top:15px;">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="alertName">Name</label>
+                        <input type="text" class="form-control" id="alertName" placeholder="Enter alert name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Operation</label>
+                        <select class="form-control" id="email">
+                            <option>BETWEEN</option>
+                            <option>GREATER THAN</option>
+                            <option>LESS THAN</option>
+                            <option>DUPLICATE CHECK</option>
+                            <option>FIND BEST TEST METHOD</option>
+                            <option>CONTAMINATION CHECK</option>
+                            <option>STANDARD REFERENCE COMPARISON</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Comparison field</label>
+                        <select class="form-control" id="sel1">
+                            <option>Ag_MEICP41s_ppm</option>
+                            <option>As_MEICP41s_ppm</option>
+                            <option>Au_AA25_ppm</option>
+                            <option>Bi_MEICP41s_ppm</option>
+                            <option>Cu_MEICP41s_ppm</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Tolerance</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="pwd" placeholder="Enter comparison tolerance">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="send" data-toggle="toggle"> Send Email
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="notify" checked="checked" data-toggle="toggle"> Notify on dashboard
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="active" checked="checked" data-toggle="toggle"> Active
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                    <div style="width:5px;height:20px" class="pull-right"></div>
+                    <button type="submit" class="btn btn-default pull-right">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

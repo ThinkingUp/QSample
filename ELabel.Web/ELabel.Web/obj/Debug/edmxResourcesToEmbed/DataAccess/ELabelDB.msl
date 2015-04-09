@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="elabelModelStoreContainer" CdmEntityContainer="elabelEntities">
+    <EntitySetMapping Name="Laboratory_Analyses">
+      <EntityTypeMapping TypeName="elabelModel.Laboratory_analysis">
+        <MappingFragment StoreEntitySet="Laboratory Analyses">
+          <ScalarProperty Name="SAMPLEID" ColumnName="SAMPLEID" />
+          <ScalarProperty Name="DUPLICATENO" ColumnName="DUPLICATENO" />
+          <ScalarProperty Name="DESPATCHNO" ColumnName="DESPATCHNO" />
+          <ScalarProperty Name="LABJOBNO" ColumnName="LABJOBNO" />
+          <ScalarProperty Name="STANDARDID" ColumnName="STANDARDID" />
+          <ScalarProperty Name="PCHECKID" ColumnName="PCHECKID" />
+          <ScalarProperty Name="PDUPLICATENO" ColumnName="PDUPLICATENO" />
+          <ScalarProperty Name="CHECKSTAGE" ColumnName="CHECKSTAGE" />
+          <ScalarProperty Name="Ag_MEICP41s_ppm" ColumnName="Ag_MEICP41s_ppm" />
+          <ScalarProperty Name="Ag_MEICP61s_ppm" ColumnName="Ag_MEICP61s_ppm" />
+          <ScalarProperty Name="Ag_MEMS81_ppm" ColumnName="Ag_MEMS81_ppm" />
+          <ScalarProperty Name="Al_MEICP41s_pct" ColumnName="Al_MEICP41s_pct" />
+          <ScalarProperty Name="Al2O3_MEICP85_pct" ColumnName="Al2O3_MEICP85_pct" />
+          <ScalarProperty Name="As_MEICP41s_ppm" ColumnName="As_MEICP41s_ppm" />
+          <ScalarProperty Name="Au_AA25_ppm" ColumnName="Au_AA25_ppm" />
+          <ScalarProperty Name="Au_PGMICP23_ppm" ColumnName="Au_PGMICP23_ppm" />
+          <ScalarProperty Name="Au_TL43_ppm" ColumnName="Au_TL43_ppm" />
+          <ScalarProperty Name="B_MEICP41s_ppm" ColumnName="B_MEICP41s_ppm" />
+          <ScalarProperty Name="Ba_MEICP41s_ppm" ColumnName="Ba_MEICP41s_ppm" />
+          <ScalarProperty Name="Ba_MEICP43_ppm" ColumnName="Ba_MEICP43_ppm" />
+          <ScalarProperty Name="Ba_MEMS81_ppm" ColumnName="Ba_MEMS81_ppm" />
+          <ScalarProperty Name="BaO_MEICP85_pct" ColumnName="BaO_MEICP85_pct" />
+          <ScalarProperty Name="Be_MEICP41s_ppm" ColumnName="Be_MEICP41s_ppm" />
+          <ScalarProperty Name="Bi_MEICP41s_ppm" ColumnName="Bi_MEICP41s_ppm" />
+          <ScalarProperty Name="Ca_MEICP41s_pct" ColumnName="Ca_MEICP41s_pct" />
+          <ScalarProperty Name="Ca_MEICP43_pct" ColumnName="Ca_MEICP43_pct" />
+          <ScalarProperty Name="CaO_MEICP85_pct" ColumnName="CaO_MEICP85_pct" />
+          <ScalarProperty Name="Cd_MEICP41s_ppm" ColumnName="Cd_MEICP41s_ppm" />
+          <ScalarProperty Name="Ce_MEICP41s_ppm" ColumnName="Ce_MEICP41s_ppm" />
+          <ScalarProperty Name="Ce_MEMS81_ppm" ColumnName="Ce_MEMS81_ppm" />
+          <ScalarProperty Name="Co_MEICP41s_ppm" ColumnName="Co_MEICP41s_ppm" />
+          <ScalarProperty Name="Co_MEICP61s_ppm" ColumnName="Co_MEICP61s_ppm" />
+          <ScalarProperty Name="Co_MEMS81_ppm" ColumnName="Co_MEMS81_ppm" />
+          <ScalarProperty Name="Cr_MEICP41s_ppm" ColumnName="Cr_MEICP41s_ppm" />
+          <ScalarProperty Name="Cr_MEMS81_ppm" ColumnName="Cr_MEMS81_ppm" />
+          <ScalarProperty Name="Cs_MEMS81_ppm" ColumnName="Cs_MEMS81_ppm" />
+          <ScalarProperty Name="Cu_CUOG46_pct" ColumnName="Cu_CUOG46_pct" />
+          <ScalarProperty Name="Cu_MEICP41s_ppm" ColumnName="Cu_MEICP41s_ppm" />
+          <ScalarProperty Name="Cu_MEICP43_ppm" ColumnName="Cu_MEICP43_ppm" />
+          <ScalarProperty Name="Cu_MEICP61s_ppm" ColumnName="Cu_MEICP61s_ppm" />
+          <ScalarProperty Name="Cu_MEMS81_ppm" ColumnName="Cu_MEMS81_ppm" />
+          <ScalarProperty Name="Cu_MEOG46_pct" ColumnName="Cu_MEOG46_pct" />
+          <ScalarProperty Name="Cu_MEOG62_pct" ColumnName="Cu_MEOG62_pct" />
+          <ScalarProperty Name="Dy_MEMS81_ppm" ColumnName="Dy_MEMS81_ppm" />
+          <ScalarProperty Name="Er_MEMS81_ppm" ColumnName="Er_MEMS81_ppm" />
+          <ScalarProperty Name="Eu_MEMS81_ppm" ColumnName="Eu_MEMS81_ppm" />
+          <ScalarProperty Name="Fe_MEICP41s_pct" ColumnName="Fe_MEICP41s_pct" />
+          <ScalarProperty Name="Fe_MEICP43_pct" ColumnName="Fe_MEICP43_pct" />
+          <ScalarProperty Name="Ga_MEICP41s_ppm" ColumnName="Ga_MEICP41s_ppm" />
+          <ScalarProperty Name="Ga_MEMS81_ppm" ColumnName="Ga_MEMS81_ppm" />
+          <ScalarProperty Name="Gd_MEMS81_ppm" ColumnName="Gd_MEMS81_ppm" />
+          <ScalarProperty Name="Hf_MEMS81_ppm" ColumnName="Hf_MEMS81_ppm" />
+          <ScalarProperty Name="Hg_MEICP41s_ppm" ColumnName="Hg_MEICP41s_ppm" />
+          <ScalarProperty Name="Ho_MEMS81_ppm" ColumnName="Ho_MEMS81_ppm" />
+          <ScalarProperty Name="K_MEICP41s_pct" ColumnName="K_MEICP41s_pct" />
+          <ScalarProperty Name="K2O_MEICP85_pct" ColumnName="K2O_MEICP85_pct" />
+          <ScalarProperty Name="La_MEICP41s_ppm" ColumnName="La_MEICP41s_ppm" />
+          <ScalarProperty Name="La_MEMS81_ppm" ColumnName="La_MEMS81_ppm" />
+          <ScalarProperty Name="LOI_MEGRA05_pct" ColumnName="LOI_MEGRA05_pct" />
+          <ScalarProperty Name="Lu_MEMS81_ppm" ColumnName="Lu_MEMS81_ppm" />
+          <ScalarProperty Name="Mg_MEICP41s_pct" ColumnName="Mg_MEICP41s_pct" />
+          <ScalarProperty Name="Mg_MEICP43_pct" ColumnName="Mg_MEICP43_pct" />
+          <ScalarProperty Name="MgO_MEICP85_pct" ColumnName="MgO_MEICP85_pct" />
+          <ScalarProperty Name="Mn_MEICP41s_ppm" ColumnName="Mn_MEICP41s_ppm" />
+          <ScalarProperty Name="Mn_MEICP43_ppm" ColumnName="Mn_MEICP43_ppm" />
+          <ScalarProperty Name="MnO_MEICP85_pct" ColumnName="MnO_MEICP85_pct" />
+          <ScalarProperty Name="Mo_MEICP41s_ppm" ColumnName="Mo_MEICP41s_ppm" />
+          <ScalarProperty Name="Mo_MEICP61s_ppm" ColumnName="Mo_MEICP61s_ppm" />
+          <ScalarProperty Name="Mo_MEMS81_ppm" ColumnName="Mo_MEMS81_ppm" />
+          <ScalarProperty Name="Mo_MEOG62_pct" ColumnName="Mo_MEOG62_pct" />
+          <ScalarProperty Name="Mo_MOOG62_pct" ColumnName="Mo_MOOG62_pct" />
+          <ScalarProperty Name="Na_MEICP41s_pct" ColumnName="Na_MEICP41s_pct" />
+          <ScalarProperty Name="Na2O_MEICP85_pct" ColumnName="Na2O_MEICP85_pct" />
+          <ScalarProperty Name="Nb_MEMS81_ppm" ColumnName="Nb_MEMS81_ppm" />
+          <ScalarProperty Name="Nd_MEMS81_ppm" ColumnName="Nd_MEMS81_ppm" />
+          <ScalarProperty Name="Ni_MEICP41s_ppm" ColumnName="Ni_MEICP41s_ppm" />
+          <ScalarProperty Name="Ni_MEICP43_ppm" ColumnName="Ni_MEICP43_ppm" />
+          <ScalarProperty Name="Ni_MEICP61s_ppm" ColumnName="Ni_MEICP61s_ppm" />
+          <ScalarProperty Name="Ni_MEMS81_ppm" ColumnName="Ni_MEMS81_ppm" />
+          <ScalarProperty Name="P_MEICP41s_ppm" ColumnName="P_MEICP41s_ppm" />
+          <ScalarProperty Name="P2O5_MEICP85_pct" ColumnName="P2O5_MEICP85_pct" />
+          <ScalarProperty Name="Pass4mm_CRUQC_pct" ColumnName="Pass4mm_CRUQC_pct" />
+          <ScalarProperty Name="Pass75um_PULQC_pct" ColumnName="Pass75um_PULQC_pct" />
+          <ScalarProperty Name="Pb_MEICP41s_ppm" ColumnName="Pb_MEICP41s_ppm" />
+          <ScalarProperty Name="Pb_MEICP43_ppm" ColumnName="Pb_MEICP43_ppm" />
+          <ScalarProperty Name="Pb_MEICP61s_ppm" ColumnName="Pb_MEICP61s_ppm" />
+          <ScalarProperty Name="Pb_MEMS81_ppm" ColumnName="Pb_MEMS81_ppm" />
+          <ScalarProperty Name="Pd_PGMICP23_ppm" ColumnName="Pd_PGMICP23_ppm" />
+          <ScalarProperty Name="Pr_MEMS81_ppm" ColumnName="Pr_MEMS81_ppm" />
+          <ScalarProperty Name="Pt_PGMICP23_ppm" ColumnName="Pt_PGMICP23_ppm" />
+          <ScalarProperty Name="Rb_MEMS81_ppm" ColumnName="Rb_MEMS81_ppm" />
+          <ScalarProperty Name="Re_REOG62_ppm" ColumnName="Re_REOG62_ppm" />
+          <ScalarProperty Name="S_MEICP41s_pct" ColumnName="S_MEICP41s_pct" />
+          <ScalarProperty Name="S_MEICP43_pct" ColumnName="S_MEICP43_pct" />
+          <ScalarProperty Name="Sb_MEICP41s_ppm" ColumnName="Sb_MEICP41s_ppm" />
+          <ScalarProperty Name="Sc_MEICP41s_ppm" ColumnName="Sc_MEICP41s_ppm" />
+          <ScalarProperty Name="SiO2_MEICP85_pct" ColumnName="SiO2_MEICP85_pct" />
+          <ScalarProperty Name="Sm_MEMS81_ppm" ColumnName="Sm_MEMS81_ppm" />
+          <ScalarProperty Name="Sn_MEICP41s_ppm" ColumnName="Sn_MEICP41s_ppm" />
+          <ScalarProperty Name="Sn_MEMS81_ppm" ColumnName="Sn_MEMS81_ppm" />
+          <ScalarProperty Name="Sr_MEICP41s_ppm" ColumnName="Sr_MEICP41s_ppm" />
+          <ScalarProperty Name="Sr_MEMS81_ppm" ColumnName="Sr_MEMS81_ppm" />
+          <ScalarProperty Name="SrO_MEICP85_pct" ColumnName="SrO_MEICP85_pct" />
+          <ScalarProperty Name="Ta_MEMS81_ppm" ColumnName="Ta_MEMS81_ppm" />
+          <ScalarProperty Name="Tb_MEMS81_ppm" ColumnName="Tb_MEMS81_ppm" />
+          <ScalarProperty Name="Th_MEICP41s_ppm" ColumnName="Th_MEICP41s_ppm" />
+          <ScalarProperty Name="Th_MEMS81_ppm" ColumnName="Th_MEMS81_ppm" />
+          <ScalarProperty Name="Ti_MEICP41s_pct" ColumnName="Ti_MEICP41s_pct" />
+          <ScalarProperty Name="TiO2_MEICP85_pct" ColumnName="TiO2_MEICP85_pct" />
+          <ScalarProperty Name="Tl_MEICP41s_ppm" ColumnName="Tl_MEICP41s_ppm" />
+          <ScalarProperty Name="Tl_MEMS81_ppm" ColumnName="Tl_MEMS81_ppm" />
+          <ScalarProperty Name="Tm_MEMS81_ppm" ColumnName="Tm_MEMS81_ppm" />
+          <ScalarProperty Name="U_MEICP41s_ppm" ColumnName="U_MEICP41s_ppm" />
+          <ScalarProperty Name="U_MEMS81_ppm" ColumnName="U_MEMS81_ppm" />
+          <ScalarProperty Name="V_MEICP41s_ppm" ColumnName="V_MEICP41s_ppm" />
+          <ScalarProperty Name="V_MEMS81_ppm" ColumnName="V_MEMS81_ppm" />
+          <ScalarProperty Name="W_MEICP41s_ppm" ColumnName="W_MEICP41s_ppm" />
+          <ScalarProperty Name="W_MEMS81_ppm" ColumnName="W_MEMS81_ppm" />
+          <ScalarProperty Name="Y_MEMS81_ppm" ColumnName="Y_MEMS81_ppm" />
+          <ScalarProperty Name="Yb_MEMS81_ppm" ColumnName="Yb_MEMS81_ppm" />
+          <ScalarProperty Name="Zn_MEICP41s_ppm" ColumnName="Zn_MEICP41s_ppm" />
+          <ScalarProperty Name="Zn_MEICP43_ppm" ColumnName="Zn_MEICP43_ppm" />
+          <ScalarProperty Name="Zn_MEICP61s_ppm" ColumnName="Zn_MEICP61s_ppm" />
+          <ScalarProperty Name="Zn_MEMS81_ppm" ColumnName="Zn_MEMS81_ppm" />
+          <ScalarProperty Name="Zn_MEOG62_pct" ColumnName="Zn_MEOG62_pct" />
+          <ScalarProperty Name="Zr_MEMS81_ppm" ColumnName="Zr_MEMS81_ppm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drillholes">
+      <EntityTypeMapping TypeName="elabelModel.Drillhole">
+        <MappingFragment StoreEntitySet="Drillholes">
+          <ScalarProperty Name="RigType" ColumnName="RigType" />
+          <ScalarProperty Name="PlannedRCDepth" ColumnName="PlannedRCDepth" />
+          <ScalarProperty Name="PlannedHoleID" ColumnName="PlannedHoleID" />
+          <ScalarProperty Name="PlannedDepth" ColumnName="PlannedDepth" />
+          <ScalarProperty Name="HoleStatus" ColumnName="HoleStatus" />
+          <ScalarProperty Name="Geologist" ColumnName="Geologist" />
+          <ScalarProperty Name="GearDownHole" ColumnName="GearDownHole" />
+          <ScalarProperty Name="EndDate_RC" ColumnName="EndDate_RC" />
+          <ScalarProperty Name="EndDate_DDH" ColumnName="EndDate_DDH" />
+          <ScalarProperty Name="DrillTargetDepth" ColumnName="DrillTargetDepth" />
+          <ScalarProperty Name="DrillholeType" ColumnName="DrillholeType" />
+          <ScalarProperty Name="Depth_RC" ColumnName="Depth_RC" />
+          <ScalarProperty Name="CostCentre" ColumnName="CostCentre" />
+          <ScalarProperty Name="ENDDATE" ColumnName="ENDDATE" />
+          <ScalarProperty Name="STARTDATE" ColumnName="STARTDATE" />
+          <ScalarProperty Name="PROSPECT" ColumnName="PROSPECT" />
+          <ScalarProperty Name="DEPTH" ColumnName="DEPTH" />
+          <ScalarProperty Name="TENEMENTID" ColumnName="TENEMENTID" />
+          <ScalarProperty Name="LL_WGS84_Calc_Z" ColumnName="LL_WGS84_Calc Z" />
+          <ScalarProperty Name="LL_WGS84_Calc_Y" ColumnName="LL_WGS84_Calc Y" />
+          <ScalarProperty Name="LL_WGS84_Calc_X" ColumnName="LL_WGS84_Calc X" />
+          <ScalarProperty Name="PROJECTCODE" ColumnName="PROJECTCODE" />
+          <ScalarProperty Name="HOLEID" ColumnName="HOLEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drillhole_Samples">
+      <EntityTypeMapping TypeName="elabelModel.Drillhole_Sample">
+        <MappingFragment StoreEntitySet="Drillhole Samples">
+          <ScalarProperty Name="Sample_Comments" ColumnName="Sample_Comments" />
+          <ScalarProperty Name="CoreCutDate" ColumnName="CoreCutDate" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="SAMPLETYPE" ColumnName="SAMPLETYPE" />
+          <ScalarProperty Name="SAMPTO" ColumnName="SAMPTO" />
+          <ScalarProperty Name="SAMPFROM" ColumnName="SAMPFROM" />
+          <ScalarProperty Name="PROJECTCODE" ColumnName="PROJECTCODE" />
+          <ScalarProperty Name="HOLEID" ColumnName="HOLEID" />
+          <ScalarProperty Name="SAMPLEID" ColumnName="SAMPLEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DrillholeSamplesViews">
+      <EntityTypeMapping TypeName="elabelModel.DrillholeSamplesView">
+        <MappingFragment StoreEntitySet="DrillholeSamplesView">
+          <ScalarProperty Name="Sample_Comments" ColumnName="Sample_Comments" />
+          <ScalarProperty Name="CoreCutDate" ColumnName="CoreCutDate" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="SAMPLETYPE" ColumnName="SAMPLETYPE" />
+          <ScalarProperty Name="SAMPTO" ColumnName="SAMPTO" />
+          <ScalarProperty Name="SAMPFROM" ColumnName="SAMPFROM" />
+          <ScalarProperty Name="SAMPLEID" ColumnName="SAMPLEID" />
+          <ScalarProperty Name="RigType" ColumnName="RigType" />
+          <ScalarProperty Name="PlannedRCDepth" ColumnName="PlannedRCDepth" />
+          <ScalarProperty Name="PlannedHoleID" ColumnName="PlannedHoleID" />
+          <ScalarProperty Name="PlannedDepth" ColumnName="PlannedDepth" />
+          <ScalarProperty Name="HoleStatus" ColumnName="HoleStatus" />
+          <ScalarProperty Name="Geologist" ColumnName="Geologist" />
+          <ScalarProperty Name="GearDownHole" ColumnName="GearDownHole" />
+          <ScalarProperty Name="EndDate_RC" ColumnName="EndDate_RC" />
+          <ScalarProperty Name="EndDate_DDH" ColumnName="EndDate_DDH" />
+          <ScalarProperty Name="DrillTargetDepth" ColumnName="DrillTargetDepth" />
+          <ScalarProperty Name="DrillholeType" ColumnName="DrillholeType" />
+          <ScalarProperty Name="Depth_RC" ColumnName="Depth_RC" />
+          <ScalarProperty Name="CostCentre" ColumnName="CostCentre" />
+          <ScalarProperty Name="ENDDATE" ColumnName="ENDDATE" />
+          <ScalarProperty Name="STARTDATE" ColumnName="STARTDATE" />
+          <ScalarProperty Name="PROSPECT" ColumnName="PROSPECT" />
+          <ScalarProperty Name="DEPTH" ColumnName="DEPTH" />
+          <ScalarProperty Name="TENEMENTID" ColumnName="TENEMENTID" />
+          <ScalarProperty Name="LL_WGS84_Calc_Z" ColumnName="LL_WGS84_Calc Z" />
+          <ScalarProperty Name="LL_WGS84_Calc_Y" ColumnName="LL_WGS84_Calc Y" />
+          <ScalarProperty Name="LL_WGS84_Calc_X" ColumnName="LL_WGS84_Calc X" />
+          <ScalarProperty Name="PROJECTCODE" ColumnName="PROJECTCODE" />
+          <ScalarProperty Name="HOLEID" ColumnName="HOLEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecoveryIntervals">
+      <EntityTypeMapping TypeName="elabelModel.RecoveryInterval">
+        <MappingFragment StoreEntitySet="RecoveryIntervals">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RecoveryRatio" ColumnName="RecoveryRatio" />
+          <ScalarProperty Name="CoreLength" ColumnName="CoreLength" />
+          <ScalarProperty Name="RecovGeoDate" ColumnName="RecovGeoDate" />
+          <ScalarProperty Name="RecovGeo" ColumnName="RecovGeo" />
+          <ScalarProperty Name="Recovery_m" ColumnName="Recovery_m" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="GEOLTO" ColumnName="GEOLTO" />
+          <ScalarProperty Name="GEOLFROM" ColumnName="GEOLFROM" />
+          <ScalarProperty Name="PROJECTCODE" ColumnName="PROJECTCODE" />
+          <ScalarProperty Name="HOLEID" ColumnName="HOLEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContaminationChecks">
+      <EntityTypeMapping TypeName="elabelModel.ContaminationCheck">
+        <MappingFragment StoreEntitySet="ContaminationCheck">
+          <ScalarProperty Name="MAX_Au_AA25_ppm" ColumnName="MAX_Au_AA25_ppm" />
+          <ScalarProperty Name="MIN_Au_AA25_ppm" ColumnName="MIN_Au_AA25_ppm" />
+          <ScalarProperty Name="STD_Au_AA25_ppm" ColumnName="STD_Au_AA25_ppm" />
+          <ScalarProperty Name="Au_AA25_ppm" ColumnName="Au_AA25_ppm" />
+          <ScalarProperty Name="MAX_As_MEICP41s_ppm" ColumnName="MAX_As_MEICP41s_ppm" />
+          <ScalarProperty Name="MIN_As_MEICP41s_ppm" ColumnName="MIN_As_MEICP41s_ppm" />
+          <ScalarProperty Name="STD_As_MEICP41s_ppm" ColumnName="STD_As_MEICP41s_ppm" />
+          <ScalarProperty Name="As_MEICP41s_ppm" ColumnName="As_MEICP41s_ppm" />
+          <ScalarProperty Name="MAX_Al_MEICP41s_pct" ColumnName="MAX_Al_MEICP41s_pct" />
+          <ScalarProperty Name="MIN_Al_MEICP41s_pct" ColumnName="MIN_Al_MEICP41s_pct" />
+          <ScalarProperty Name="STD_Al_MEICP41s_pct" ColumnName="STD_Al_MEICP41s_pct" />
+          <ScalarProperty Name="Al_MEICP41s_pct" ColumnName="Al_MEICP41s_pct" />
+          <ScalarProperty Name="MAX_Ag_MEICP41s_ppm" ColumnName="MAX_Ag_MEICP41s_ppm" />
+          <ScalarProperty Name="MIN_Ag_MEICP41s_ppm" ColumnName="MIN_Ag_MEICP41s_ppm" />
+          <ScalarProperty Name="STD_Ag_MEICP41s_ppm" ColumnName="STD_Ag_MEICP41s_ppm" />
+          <ScalarProperty Name="Ag_MEICP41s_ppm" ColumnName="Ag_MEICP41s_ppm" />
+          <ScalarProperty Name="CHECKSTAGE" ColumnName="CHECKSTAGE" />
+          <ScalarProperty Name="PDUPLICATENO" ColumnName="PDUPLICATENO" />
+          <ScalarProperty Name="PCHECKID" ColumnName="PCHECKID" />
+          <ScalarProperty Name="STANDARDID" ColumnName="STANDARDID" />
+          <ScalarProperty Name="LABJOBNO" ColumnName="LABJOBNO" />
+          <ScalarProperty Name="DESPATCHNO" ColumnName="DESPATCHNO" />
+          <ScalarProperty Name="DUPLICATENO" ColumnName="DUPLICATENO" />
+          <ScalarProperty Name="SAMPLEID" ColumnName="SAMPLEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="standardReferences">
+      <EntityTypeMapping TypeName="elabelModel.standardReference">
+        <MappingFragment StoreEntitySet="standardReference">
+          <ScalarProperty Name="MAX_Au_AA25_ppm" ColumnName="MAX_Au_AA25_ppm" />
+          <ScalarProperty Name="MIN_Au_AA25_ppm" ColumnName="MIN_Au_AA25_ppm" />
+          <ScalarProperty Name="STD_DEV_Au_AA25_ppm" ColumnName="STD_DEV_Au_AA25_ppm" />
+          <ScalarProperty Name="STD_Au_AA25_ppm" ColumnName="STD_Au_AA25_ppm" />
+          <ScalarProperty Name="Au_AA25_ppm" ColumnName="Au_AA25_ppm" />
+          <ScalarProperty Name="MAX_As_MEICP41s_ppm" ColumnName="MAX_As_MEICP41s_ppm" />
+          <ScalarProperty Name="MIN_As_MEICP41s_ppm" ColumnName="MIN_As_MEICP41s_ppm" />
+          <ScalarProperty Name="STD_DEV_As_MEICP41s_ppm" ColumnName="STD_DEV_As_MEICP41s_ppm" />
+          <ScalarProperty Name="STD_As_MEICP41s_ppm" ColumnName="STD_As_MEICP41s_ppm" />
+          <ScalarProperty Name="As_MEICP41s_ppm" ColumnName="As_MEICP41s_ppm" />
+          <ScalarProperty Name="MAX_Al_MEICP41s_pct" ColumnName="MAX_Al_MEICP41s_pct" />
+          <ScalarProperty Name="MIN_Al_MEICP41s_pct" ColumnName="MIN_Al_MEICP41s_pct" />
+          <ScalarProperty Name="STD_DEV_Al_MEICP41s_pct" ColumnName="STD_DEV_Al_MEICP41s_pct" />
+          <ScalarProperty Name="STD_Al_MEICP41s_pct" ColumnName="STD_Al_MEICP41s_pct" />
+          <ScalarProperty Name="Al_MEICP41s_pct" ColumnName="Al_MEICP41s_pct" />
+          <ScalarProperty Name="MAX_Ag_MEICP41s_ppm" ColumnName="MAX_Ag_MEICP41s_ppm" />
+          <ScalarProperty Name="MIN_Ag_MEICP41s_ppm" ColumnName="MIN_Ag_MEICP41s_ppm" />
+          <ScalarProperty Name="STD_DEV_Ag_MEICP41s_ppm" ColumnName="STD_DEV_Ag_MEICP41s_ppm" />
+          <ScalarProperty Name="STD_Ag_MEICP41s_ppm" ColumnName="STD_Ag_MEICP41s_ppm" />
+          <ScalarProperty Name="Ag_MEICP41s_ppm" ColumnName="Ag_MEICP41s_ppm" />
+          <ScalarProperty Name="PDUPLICATENO" ColumnName="PDUPLICATENO" />
+          <ScalarProperty Name="PCHECKID" ColumnName="PCHECKID" />
+          <ScalarProperty Name="STANDARDID" ColumnName="STANDARDID" />
+          <ScalarProperty Name="LABJOBNO" ColumnName="LABJOBNO" />
+          <ScalarProperty Name="DESPATCHNO" ColumnName="DESPATCHNO" />
+          <ScalarProperty Name="DUPLICATENO" ColumnName="DUPLICATENO" />
+          <ScalarProperty Name="SAMPLEID" ColumnName="SAMPLEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DrillholesPlannings">
+      <EntityTypeMapping TypeName="elabelModel.DrillholesPlanning">
+        <MappingFragment StoreEntitySet="DrillholesPlanning">
+          <ScalarProperty Name="ALTY2" ColumnName="ALTY2" />
+          <ScalarProperty Name="ALTX2" ColumnName="ALTX2" />
+          <ScalarProperty Name="ALTY1" ColumnName="ALTY1" />
+          <ScalarProperty Name="ALTX1" ColumnName="ALTX1" />
+          <ScalarProperty Name="LL_WGS84_Calc_Y" ColumnName="LL_WGS84_Calc#Y" />
+          <ScalarProperty Name="LL_WGS84_Calc_X" ColumnName="LL_WGS84_Calc#X" />
+          <ScalarProperty Name="SAMPTO" ColumnName="SAMPTO" />
+          <ScalarProperty Name="SAMPFROM" ColumnName="SAMPFROM" />
+          <ScalarProperty Name="PROJECTCODE" ColumnName="PROJECTCODE" />
+          <ScalarProperty Name="SAMPLEID" ColumnName="SAMPLEID" />
+          <ScalarProperty Name="HOLEID" ColumnName="HOLEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlertGenerators">
+      <EntityTypeMapping TypeName="elabelModel.AlertGenerator">
+        <MappingFragment StoreEntitySet="AlertGenerator">
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Labels">
+      <EntityTypeMapping TypeName="elabelModel.Label">
+        <MappingFragment StoreEntitySet="Label">
+          <ScalarProperty Name="IsTransferring" ColumnName="IsTransferring" />
+          <ScalarProperty Name="Scanned" ColumnName="Scanned" />
+          <ScalarProperty Name="LastScanned" ColumnName="LastScanned" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SampleID" ColumnName="SampleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RejectAlerts">
+      <EntityTypeMapping TypeName="elabelModel.RejectAlert">
+        <MappingFragment StoreEntitySet="RejectAlert">
+          <ScalarProperty Name="SampleID" ColumnName="SampleID" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
